@@ -1,0 +1,31 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <div id="app1">
+        {{message}}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app1',
+            data: {
+                message: 'test'
+            },
+            created: function() {
+                console.log('message is ' + this.message)
+            }
+        })
+    </script>
+
+
+
+</body>
+
+
+</html>
