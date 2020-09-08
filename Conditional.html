@@ -1,0 +1,60 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <div id="app">
+        <h1 v-if="awesome">Vue is awesome!</h1>
+        <h1 v-else>QQ</h1>
+    </div>
+
+    <div id="example-1">
+        <li v-for="(item, index) in items" :key="item.message">
+            {{ parentMessage }} - {{index}} - {{item.message}}
+        </li>
+    </div>
+
+
+    <ul id="v-for-object" class="demo">
+        <li v-for="(value, name, index) in object">
+            {{index}}.{{name}} : {{value}}
+        </li>
+    </ul>
+
+</body>
+<script src=" https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+</script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            awesome: false
+        }
+    })
+
+    var example = new Vue({
+        el: '#example-1',
+        data: {
+            parentMessage: 'Parent',
+            items: [
+                { message: 'Foo' },
+                { message: 'Bar' }
+            ]
+        }
+    })
+
+    var vForObject = new Vue({
+        el: '#v-for-object',
+        data: {
+            object: {
+                title: 'How to do lists in Vue',
+                author: 'Jane Doe',
+                publishedAt: '2016-04-10'
+            }
+        }
+    })
+</script>
+
+</html>

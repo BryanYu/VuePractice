@@ -1,0 +1,33 @@
+<html>
+
+<head>
+</head>
+
+<body>
+
+    <div id="app">
+        <div v-bind:class="{active: isActive, 'text-danger': hasError}">12345</div>
+        <my-component class="baz foo"></my-component>
+    </div>
+
+
+
+</body>
+<script src=" https://cdn.jsdelivr.net/npm/vue/dist/vue.js">
+</script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            isActive: true,
+            hasError: true
+        }
+    });
+
+    Vue.component('my-component', {
+        template: '<p class="foo bar">Hi</p>'
+    })
+
+</script>
+
+</html>
