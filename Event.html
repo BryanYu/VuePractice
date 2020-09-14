@@ -37,7 +37,7 @@
             name: 'Vue.js'
         },
         methods: {
-            greet: function (event) {
+            greet: function(event) {
                 alert('Hello' + this.name + '!');
                 if (event) {
                     alert(event.target.tagName);
@@ -49,16 +49,15 @@
     var example3 = new Vue({
         el: '#example-3',
         methods: {
-            say: function (message) {
+            say: function(message) {
                 alert(message);
             },
-            warn: function (message, event) {
+            warn: function(message, event) {
                 if (event) {
                     event.preventDefault();
                 }
                 alert(message);
             }
-
         }
     })
 </script>
