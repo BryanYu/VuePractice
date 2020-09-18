@@ -1,0 +1,29 @@
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <div id="example1">
+        <blog-post post-title="123" likes="42" ids="[123,456,789]" author="{
+            name: 'Veronica',
+            company: 'Veridan Dynamics'
+        }"></blog-post>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        Vue.component('blog-post', {
+            props: ["postTitle", "likes", "ids", "author"],
+            template: '<h3>{{ postTitle }} {{ likes }} {{ ids }} {{ author }}</h3>'
+        })
+
+        new Vue({
+            el: '#example1'
+        });
+    </script>
+</body>
+
+</html>
